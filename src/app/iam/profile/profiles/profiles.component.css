@@ -1,0 +1,8 @@
+.has-error,
+input {
+    border-bottom-color: red;
+}
+
+.help {
+    background-color: red;
+}

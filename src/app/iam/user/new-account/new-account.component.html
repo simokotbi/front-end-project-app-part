@@ -1,0 +1,74 @@
+<div class="auth">
+        <div class="auth-container">
+            <div class="card">
+                <header class="auth-header">
+                    <h1 class="auth-title">
+                        <div class="logo">
+                            <span class="l l1"></span>
+                            <span class="l l2"></span>
+                            <span class="l l3"></span>
+                            <span class="l l4"></span>
+                            <span class="l l5"></span>
+                        </div> project-app
+                    </h1>
+                </header>
+                <div class="auth-content">
+                    <p class="text-center">Créer votre compte</p>
+                    <form id="signup-form" [formGroup] = "formdata" >
+                        <div class="form-group">
+                            <label for="firstname">Nom</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control underlined" name="lastname" formControlName = "lastname" id="lastname" placeholder="Nom" required="true">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control underlined" name="firstname" formControlName = "firstname" id="firstname" placeholder="Prénom" required="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="firstname1">Adresse mail</label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="firstname2">Numéro de téléphone</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control underlined" name="mailAdress" formControlName = "mailAdress" id="mailAdress" placeholder="Enter firstname" required="">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control underlined" name="phoneNumber" formControlName = "phoneNumber" id="phoneNumber" placeholder="Enter lastname" required="">
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Mot de passe</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control underlined" name="password" formControlName = "password" id="password" placeholder="Enter password" required="">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control underlined" name="password2" formControlName = "password2" id="retype_password" placeholder="Re-type password" required="">
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="form-group">
+                            <button type="submit" (click)="createNewAccount(formdata.value)"  [disabled] = "!formdata.valid" class="btn btn-block btn-primary">Sign Up</button>
+                        </div>
+                        <div class="form-group">
+                            <p class="text-muted text-center">Déjà inscrit(e) ? <a href="#" routerLink="/login">S’identifier</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="index.html" class="btn btn-secondary btn-sm">
+                    <i class="fa fa-arrow-left"></i> Retour à la page d'acueil </a>
+            </div>
+        </div>
+    </div>

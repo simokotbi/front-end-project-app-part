@@ -1,0 +1,25 @@
+.form-group {
+    padding: 12px 15px;
+}
+
+.table {
+    border: 1px solid rgb(155, 152, 152);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table tr {
+    border-bottom: 1px solid #dddddd;
+    padding: 12px 15px;
+}
+
+tr:hover {
+    transform: scale(1.02);
+    background-color: lavender;
+}
+
+
+/* .table :nth-of-type(even) {
+    background-color: #f3f3f3f3;
+} */

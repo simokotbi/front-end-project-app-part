@@ -1,0 +1,11 @@
+.mat-table {
+    width: 80px;
+    margin: 20px auto;
+}
+
+.toaster {
+    margin-bottom: 0;
+    background-color: indigo;
+    position: relative;
+    bottom: 0px;
+}

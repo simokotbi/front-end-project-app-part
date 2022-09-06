@@ -1,0 +1,264 @@
+<section id="user-profile">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body-pa">
+                    <div class="card-title">
+                        <h4>Profil</h4>
+                    </div>
+                    <!-- <h3>{{user.fullname}}//{{user.phoneNumber}}//{{user.firstname}}</h3> -->
+                    <!-- <div class="form-group"> -->
+                    <div class="mat-elevation-z8">
+
+                        <mat-list>
+                            <h3 mat-subheader>Folders</h3>
+                            <mat-list-item>
+                                <mat-icon mat-list-icon>account_box</mat-icon>
+                                <h4 mat-line>{{user.fullname}}</h4>
+                                <p mat-line> {{user.creationDate}}</p>
+                            </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <h3 mat-subheader>Notes</h3>
+                            <mat-list-item>
+                                <mat-icon mat-list-icon>info</mat-icon>
+                                <h4 mat-line>{{user.fullname}}</h4>
+                                <p mat-line>{{user.login}} </p>
+                                <p mat-line>{{user.mailAdress}} </p>
+                            </mat-list-item>
+                        </mat-list>
+                        <!-- <mat-table [dataSource]="user.profiles">
+                            <ng-container matColumnDef="Nom">
+                                <mat-header-cell *matHeaderCellDef> Nom </mat-header-cell>
+                                <mat-cell> {{user.firstname}} </mat-cell>
+                            </ng-container>
+
+
+                            <ng-container matColumnDef="Adresse mail">
+                                <mat-header-cell *matHeaderCellDef> Adresse mail </mat-header-cell>
+                                <mat-cell *matCellDef="let user"> {{user.mailAdress}}</mat-cell>
+                            </ng-container>
+                            <ng-container matColumnDef="Actions">
+                                <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+                                <mat-cell *matCellDef="let Row">
+                                    <button mat-icon-button><mat-icon>launch</mat-icon></button>
+                                    <button mat-icon-button><mat-icon>delete-outline</mat-icon></button>
+                                </mat-cell>
+                            </ng-container>
+                            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                            <mat-row *matRowDef="let Row; columns: displayedColumns"></mat-row>
+                        </mat-table> -->
+                    </div>
+
+                </div>
+                <!-- </div> -->
+                <!-- <form id="signup-form">
+                        <table class="table">
+                            <tr>
+                                <div class="form-group">
+                                    <ul class="sidebar-menu metismenu">
+                                        <li>
+                                            <a href="" data-toggle="modal" data-target="#myModal">
+
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <label for="firstname">Nom</label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        {{user.fullname}}
+
+                                                        <i class="fa arrow"></i>
+                                                    </div>
+
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="firstname1">login</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            {{user.login}}
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="form-group">
+                                    <a href="" data-toggle="modal" data-target="#myModal">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="firstname1">Adresse mail</label>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                {{user.mailAdress}}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="form-group">
+                                    <a href="" data-toggle="modal" data-target="#myModal">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <label for="firstname2">Numéro de téléphone</label>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                {{user.phoneNumber}}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </tr>
+                            <tr>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="firstname2">Date création du compte</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            {{user.creationDate | date:'dd/MM/yyyy hh:mm:ss'}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </tr>
+
+                            <div class="form-group">
+                                <tr>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="firstname2">Etat du compte</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            {{user.state }}
+
+                                        </div>
+                                    </div>
+                                </tr>
+                                <tr>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="firstname2">Date activation</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            {{user.activationDate | date:'dd/MM/yyyy hh:mm:ss'}}
+                                        </div>
+                                    </div>
+                                </tr>
+                            </div>
+
+                            <a href="" data-toggle="modal" data-target="#myModal">
+                                <div class="form-group">
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="firstname">Intitulé de poste</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            {{user.jobTitle}}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </table>
+                    </form> -->
+                <!-- </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="users">
+    <div class="row ">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body-pa">
+                    <div class="card-title">
+                        <h4>Profils attribués</h4>
+                    </div>
+                    <div class="bootstrap-data-table-panel">
+                        <div class="table-responsive">
+                            <div id="row-select_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                                <div class="row-pa">
+                                    <div class="row-pa">
+                                        <div class="table-flip-scroll">
+                                            <table id="row-select" class="table table-striped table-bordered table-hover flip-content" role="grid" aria-describedby="row-select_info">
+                                                <thead class="flip-header">
+                                                    <tr role="row-pa">
+                                                        <th class="sorting_asc td-th-pa " tabindex="0" aria-controls="row-select" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 120px;">Profil
+                                                        </th>
+                                                        <th class="sorting td-th-pa " tabindex="0" aria-controls="row-select" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 189px;">Déscription
+                                                        </th>
+                                                        <th class="sorting td-th-pa " tabindex="0" aria-controls="row-select" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 90px;">Date attribution
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let profile of profiles;" role="row" class="odd">
+                                                        <td class="sorting_1 td-th-pa ">{{profile.code}}</td>
+                                                        <td class="td-th-pa ">{{profile.description}}</td>
+                                                        <td class="td-th-pa ">{{profile.additionDate}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade none-border show" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title"><strong>Add a category </strong></h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="control-label">Category Name</label> {{user.fullname}}
+                                <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control underlined" name="mailAdress" formControlName="mailAdress" id="mailAdress" placeholder="Enter firstname" required="" value="{{user.fullname}}">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="control-label">Choose Category Color</label>
+                                <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                                <option value="success">Success</option>
+                                                <option value="danger">Danger</option>
+                                                <option value="info">Info</option>
+                                                <option value="pink">Pink</option>
+                                                <option value="primary">Primary</option>
+                                                <option value="warning">Warning</option>
+                                            </select>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
